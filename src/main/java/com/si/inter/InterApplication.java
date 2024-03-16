@@ -19,6 +19,7 @@ public class InterApplication {
 		String file2 = new String("file2");
 		filesystemService.fcreate(file1);
 		filesystemService.fwrite(file1, "Hello File 1");
+<<<<<<< HEAD
 //		System.out.println(filesystemService.fread(file1));
 
 		filesystemService.fcreate(file2);
@@ -27,6 +28,15 @@ public class InterApplication {
 
 		filesystemService.fwrite(file1, "Hello Again File 1");
 //		System.out.println(filesystemService.fread(file1));
+=======
+		System.out.println(filesystemService.fread(file1));
+
+		filesystemService.fcreate(file2);
+		filesystemService.fwrite(file2, "Hello File 2");
+		System.out.println(filesystemService.fread(file2));
+
+		filesystemService.fwrite(file1, "Hello Again File 1");
+>>>>>>> origin/main
 
 
 	}
