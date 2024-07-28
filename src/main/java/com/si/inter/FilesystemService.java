@@ -29,6 +29,25 @@ public class FilesystemService {
         return INSTANCE;
     }
 
+    /**
+     * Reads the content of a file from the in-memory file system.
+     *
+     * @param name the name of the file to read
+     * @return the content of the file as a String, or a message indicating that the file does not exist
+     * @throws IllegalArgumentException if the provided filename is null or empty
+     * 
+     * <p>
+     * This method retrieves the content of a file identified by the given name from an in-memory file system.
+     * If the file does not exist, it returns a message stating "File with given Filename Does not exist".
+     * The method iterates through the contents of the file and prints each file's content to the standard output.
+     * </p>
+     *
+     * <p>
+     * Note: The method does not throw an exception for a non-existent file but instead returns a specific message.
+     * Ensure that the filename provided is valid and exists in the in-memory file system to avoid receiving
+     * the error message.
+     * </p>
+     */
     public String fread(String name) {
         
         if(inMemoryFileSystem.get(name) == null) {
