@@ -30,6 +30,7 @@ public class FilesystemService {
     }
 
     public String fread(String name) {
+        
         if(inMemoryFileSystem.get(name) == null) {
             //Exception
             return "File with given Filename Does not exist";
