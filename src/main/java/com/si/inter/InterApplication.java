@@ -8,11 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class InterApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(InterApplication.class, args);
 	}
 
 	@PostConstruct
 	public void start() {
+		
 		FilesystemService  filesystemService =  FilesystemService.getINSTANCE();
 
 		String file1 = new String("file1");
